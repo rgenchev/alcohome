@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="<%= @page.language_code %>">
+<head>
+  <title>Workspace</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= render "alchemy/pages/meta_data" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= yield %>
+  <%= render "alchemy/edit_mode" %>
+</body>
+</html>
