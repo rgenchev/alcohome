@@ -11,6 +11,7 @@ class ProductDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     price: Field::String.with_options(searchable: false),
+    category: Field::BelongsTo.with_options(searchable: false),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -24,6 +25,7 @@ class ProductDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :price,
+    :category,
     :created_at,
   ].freeze
 
@@ -33,6 +35,7 @@ class ProductDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :price,
+    :category,
     :created_at,
     :updated_at,
   ].freeze
@@ -43,12 +46,13 @@ class ProductDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :name,
     :price,
+    :category
   ].freeze
 
   # Overwrite this method to customize how products are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(product)
-  #   "Product ##{product.id}"
-  # end
+  def display_resource(product)
+    "#{product.name}"
+  end
 end
