@@ -35,8 +35,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Windows dependent!!!
 gem 'tzinfo-data'
 
-gem 'alchemy_cms', github: 'AlchemyCMS/alchemy_cms', branch: 'master'
-gem 'alchemy-devise', github: 'AlchemyCMS/alchemy-devise', branch: 'master'
+gem "administrate"
+gem 'devise'
+
+gem 'puma'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
