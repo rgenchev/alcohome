@@ -1,9 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+<div class="row">
+	<div class="col-md-12 text-center pb-3">
+		<h2><strong><%= @category.name %></strong></h2>
+	</div>
+</div>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<div class="row">
+  <% @category.products.each do |product| %>
+    <div class="col-md-4 text-center">
+      <div class="thumbnail">
+		  <%= product.name %>
+		  <%= product.price %>
+	  </div>
+    </div>
+  <% end %>
+</div>
