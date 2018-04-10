@@ -1,2 +1,6 @@
-// Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.3rem;
+}
