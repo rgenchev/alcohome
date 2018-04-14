@@ -13,6 +13,7 @@
 //= require jquery3
 //= require jquery_ujs
 //= require popper
+//= require typed.js/lib/typed
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
