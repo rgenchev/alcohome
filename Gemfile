@@ -24,6 +24,7 @@ gem 'devise'
 gem 'puma'
 
 gem 'bootstrap', '~> 4.0.0'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'sqlite3'
