@@ -10,9 +10,9 @@
   <% @category.products.each do |product| %>
     <div class="col-md-4 text-center">
       <a href="<%= product_path(product) %>">
-        <div class="thumbnail mb-5">
-          <%= image_tag('vodka_grey_goose.jpg', height: '55%', width: '55%', class: 'product-image img-fluid rounded') %>
-          <div class="product-details-wrapper">
+        <div class="hoverable-field-wrapper mb-5">
+          <%= image_tag('vodka_grey_goose.jpg', height: '55%', width: '55%', class: 'hoverable-image img-fluid rounded') %>
+          <div class="hoverable-field-text-wrapper">
             <div class="product-details">
               <strong><i class="fa fa-eye"></i> <%= link_to 'Product Details', product_path(product) %></strong>
             </div>
