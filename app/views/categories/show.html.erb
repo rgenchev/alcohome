@@ -12,12 +12,13 @@
       <a href="<%= product_path(product) %>">
         <div class="thumbnail mb-5">
           <%= image_tag('vodka_grey_goose.jpg', height: '55%', width: '55%', class: 'product-image img-fluid rounded') %>
-          <div class="product-text-wrapper">
-            <div class="product-text">
-              <h4><%= product.name %></h4>
-              <p><%= product.price %> EUR</p>
+          <div class="product-details-wrapper">
+            <div class="product-details">
+              <strong><i class="fa fa-eye"></i> <%= link_to 'Product Details', product_path(product) %></strong>
             </div>
           </div>
+          <h4><%= product.name %></h4>
+          <p><%= product.price %> EUR</p>
         </div>
       </a>
     </div>
