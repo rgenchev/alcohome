@@ -32,21 +32,13 @@ a:active {
     text-decoration: none;
 }
 
-.product-image {
+.hoverable-image {
 	opacity: 1;
 	transition: .5s ease;
 	backface-visibility: hidden;
 }
 
-.thumbnail:hover .product-image {
-	opacity: 0.3;
-}
-
-.thumbnail:hover .product-details-wrapper {
-	opacity: 1;
-}
-
-.product-details-wrapper {
+.hoverable-field-text-wrapper {
 	transition: .5s ease;
 	opacity: 0;
 	position: absolute;
@@ -56,6 +48,14 @@ a:active {
 	-ms-transform: translate(-50%, -50%);
 	text-align: center;
 	width: 60%;
+}
+
+.hoverable-field-wrapper:hover .hoverable-image {
+	opacity: 0.3;
+}
+
+.hoverable-field-wrapper:hover .hoverable-field-text-wrapper {
+	opacity: 1;
 }
 
 .product-details {
