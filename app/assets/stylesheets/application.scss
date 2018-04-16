@@ -76,8 +76,28 @@ a:active {
 	font-size: 5rem;
 }
 
+#about-heading {
+	font-size: 4rem;
+}
+
+.fb-ic {
+	font-size: 1.5rem;
+}
+
+.ins-ic {
+	font-size: 1.5rem;
+}
+
 @media (max-width: 768px) {
 	#alcohome-heading {
 		font-size: 3.5rem;
+	}
+
+	#about-heading {
+		font-size: 2rem;
+	}
+
+	.contact-email, .contact-phone-number, .contact-address {
+		font-size: 1.1rem;
 	}
 }
