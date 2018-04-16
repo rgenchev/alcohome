@@ -7,4 +7,7 @@ class StaticPagesController < ApplicationController
     @category_whiskey = Category.find_by(name: "Whiskey")
     @category_wine = Category.find_by(name: "Wein")
 	end
+
+  def about
+  end
 end
