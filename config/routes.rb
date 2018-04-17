@@ -6,11 +6,13 @@ Rails.application.routes.draw do
 
   resources :categories
   resources :products
+  resources :vendors
 
   namespace :admin do
     resources :users
     resources :products
     resources :categories
+    resources :vendors
 
     root to: "users#index"
   end

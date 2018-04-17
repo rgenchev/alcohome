@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class CategoryDashboard < Administrate::BaseDashboard
+class VendorDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -11,6 +11,7 @@ class CategoryDashboard < Administrate::BaseDashboard
     products: Field::HasMany,
     id: Field::Number,
     name: Field::String,
+    description: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -24,7 +25,7 @@ class CategoryDashboard < Administrate::BaseDashboard
     :products,
     :id,
     :name,
-    :created_at,
+    :description,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -33,6 +34,7 @@ class CategoryDashboard < Administrate::BaseDashboard
     :products,
     :id,
     :name,
+    :description,
     :created_at,
     :updated_at,
   ].freeze
@@ -43,12 +45,13 @@ class CategoryDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :products,
     :name,
+    :description,
   ].freeze
 
-  # Overwrite this method to customize how categories are displayed
+  # Overwrite this method to customize how vendors are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(category)
-  #   "Category ##{category.id}"
+  # def display_resource(vendor)
+  #   "Vendor ##{vendor.id}"
   # end
 end
