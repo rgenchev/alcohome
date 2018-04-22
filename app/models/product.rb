@@ -4,4 +4,9 @@ class Product < ApplicationRecord
 
   belongs_to :category
   belongs_to :vendor
+
+  validates :name, presence: true
+  validates :price, presence: true
+  validates :category, presence: true
+  validates :vendor, presence: true
 end

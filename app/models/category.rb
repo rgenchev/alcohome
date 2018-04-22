@@ -5,6 +5,7 @@ class Category < ApplicationRecord
 	has_many :products
 
   validate :limited_categories
+  validates :name, presence: true
 
   private
 

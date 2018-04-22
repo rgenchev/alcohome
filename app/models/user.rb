@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   enum role: [ :user, :admin ]
+
+  validates :role, inclusion: { in: %w(user admin) }
 end
