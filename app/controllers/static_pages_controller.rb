@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
     @category_rum = Category.find_by(name: "Rum")
     @category_vodka = Category.find_by(name: "Vodka")
     @category_whiskey = Category.find_by(name: "Whiskey")
-    @category_wine = Category.find_by(name: "Wein")
+    @category_wine = Category.find_by(name: "Wine")
 	end
 
   def about
