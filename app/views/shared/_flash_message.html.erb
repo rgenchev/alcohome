@@ -1,0 +1,9 @@
+<% unless flash.count == 0 %>
+  <div class="row text-center">
+    <div class="col-md-12">
+      <% flash.each do |key, value| %>
+        <%= content_tag :div, value, class: "#{bootstrap_alert_class(key)} mb-2 mt-2" %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
