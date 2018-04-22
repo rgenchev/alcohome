@@ -15,6 +15,10 @@ module Admin
     #   Vendor.find_by!(slug: param)
     # end
 
+    def find_resource(param)
+      Vendor.find_by!(slug: param)
+    end
+
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
     # for more information
   end

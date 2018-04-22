@@ -28,6 +28,8 @@ gem "font-awesome-rails"
 
 gem "pundit"
 
+gem 'friendly_id', '~> 5.1.0'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'

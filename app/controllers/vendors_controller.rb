@@ -6,7 +6,7 @@ class VendorsController < ApplicationController
   end
 
   def show
-    @vendor = Vendor.find(params[:id])
+    @vendor = Vendor.friendly.find(params[:id])
 
     authorize @vendor
   end
