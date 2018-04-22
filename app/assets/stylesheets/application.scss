@@ -76,7 +76,7 @@ a:active {
 	font-size: 5rem;
 }
 
-#about-heading {
+#about-heading, #contact-heading {
 	font-size: 4rem;
 }
 
@@ -93,8 +93,8 @@ a:active {
 		font-size: 3.5rem;
 	}
 
-	#about-heading {
-		font-size: 2rem;
+	#about-heading, #contact-heading {
+		font-size: 2.5rem;
 	}
 
 	.contact-email, .contact-phone-number, .contact-address {
