@@ -26,6 +26,8 @@ gem 'puma'
 gem 'bootstrap', '~> 4.0.0'
 gem "font-awesome-rails"
 
+gem "pundit"
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
