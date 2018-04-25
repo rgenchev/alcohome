@@ -14,7 +14,7 @@
           <%= image_tag('vodka_grey_goose.jpg', height: '55%', width: '55%', class: 'hoverable-image img-fluid rounded') %>
           <div class="hoverable-field-text-wrapper">
             <div class="product-details">
-              <strong><i class="fa fa-eye"></i> <%= link_to 'Product Details', product_path(product) %></strong>
+              <strong><i class="fa fa-eye"></i> <%= link_to t('.product_details'), product_path(product) %></strong>
             </div>
           </div>
           <h4><%= product.name %></h4>

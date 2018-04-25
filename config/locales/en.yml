@@ -20,4 +20,29 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+
+  categories:
+    index:
+      title: "Categories"
+    show:
+      product_details: "Product Details"
+  # products:
+  #   index:
+  #   show:
+  shared:
+    footer:
+      categories: "Categories"
+      about: "About"
+      contact: "Contact"
+  nav:
+    logout: "Log out"
+  static_pages:
+    about:
+      title: "Who are we and what's our mission?"
+    home:
+      first_subtitle: "What should it be?"
+    contact:
+      title: "Contact"
+      address: "Address"
+      email: "Email"
+      phone_number: "Phone number"

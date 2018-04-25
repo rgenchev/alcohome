@@ -23,19 +23,19 @@
                 </h5>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 110px; height:1px; background-color: #4F7479;">
                 <p>
-                  <%= link_to 'Categories', categories_path %>
+                  <%= link_to t('.categories'), categories_path %>
                 </p>
                 <p>
-                  <%= link_to 'About', about_path %>
+                  <%= link_to t('.about'), about_path %>
                 </p>
                 <p>
-                  <%= link_to 'Contact', contact_path %>
+                  <%= link_to t('.contact'), contact_path %>
                 </p>
             </div>
 
             <div class="col-md-6 col-lg-6 col-xl-6">
                 <h5 class="text-uppercase font-weight-bold">
-                    <strong>Contact</strong>
+                    <strong><%= t('.contact') %></strong>
                 </h5>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 90px; height:1px; background-color: #4F7479;">
                 <p class="contact-address">
