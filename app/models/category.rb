@@ -14,4 +14,8 @@ class Category < ApplicationRecord
         errors[:base] << "There is a limited number of categories."
       end
     end
+
+    def readonly?
+      !new_record?
+    end
 end
