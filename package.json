@@ -1,4 +1,8 @@
 {
+	"name": "community-next",
+	"engines": {
+		"node": "^9.3.0"
+	},
   "dependencies": {
     "typed.js": "^2.0.6"
   }
