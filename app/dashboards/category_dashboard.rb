@@ -49,6 +49,6 @@ class CategoryDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
   def display_resource(category)
-    "Category #{category.name}"
+    "#{category.name}"
   end
 end
