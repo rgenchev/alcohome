@@ -34,8 +34,12 @@ en:
       categories: "Categories"
       about: "About"
       contact: "Contact"
-  nav:
-    logout: "Log out"
+    nav:
+      about: "About"
+      contact: "Contact"
+      categories: "Categories"
+      all_categories: "All Categories"
+      logout: "Log out"
   static_pages:
     about:
       title: "Who are we and what's our mission?"

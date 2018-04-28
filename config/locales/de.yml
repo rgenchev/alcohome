@@ -11,10 +11,14 @@ de:
   shared:
     footer:
       categories: "Kategorien"
-      about: "Worum geht es?"
+      about: "Worum geht es"
       contact: "Kontakt"
-  nav:
-    logout: "Ausloggen"
+    nav:
+      about: "Worum geht es"
+      contact: "Kontakt"
+      categories: "Kategorien"
+      all_categories: "Alle Kategorien"
+      logout: "Ausloggen"
   static_pages:
     about:
       title: "Wer sind wir und was ist unsere Mission?"
