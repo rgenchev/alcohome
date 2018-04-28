@@ -18,14 +18,6 @@ class CategoryTest < ActiveSupport::TestCase
     assert category.save
   end
 
-  test "categories should not be edited (readonly)" do
-    category = Category.create(name: "Gin")
-
-    assert_raise ActiveRecord::ReadOnlyRecord do
-      category.update(name: "Vodka")
-    end
-  end
-
   test "only 9 categories (at least for now) should be limited" do
     9.times do
       Category.create!(name: "#{rand(10000)}")

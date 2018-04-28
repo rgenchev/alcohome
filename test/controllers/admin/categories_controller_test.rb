@@ -48,22 +48,22 @@ class Admin::CategoriesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should not update category" do
+  test "should update category" do
     sign_in(@admin)
 
-    assert_raise ActiveRecord::ReadOnlyRecord do
-      patch admin_category_url(@category), params: { category: { name: "Gin" } }
-    end
+    patch admin_category_url(@category), params: { category: { name: "Gin" } }
+
+    assert_redirected_to admin_category_url(@category)
   end
 
   test "should not destroy category" do
     sign_in(@admin)
 
-    assert_raise ActiveRecord::ReadOnlyRecord do
-      assert_no_difference('Category.count') do
-        delete admin_category_url(@category)
-      end
+    assert_difference('Category.count', -1) do
+      delete admin_category_url(@category)
     end
+
+    assert_redirected_to admin_categories_url
   end
 
   # Non-admin users
