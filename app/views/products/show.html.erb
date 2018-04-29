@@ -1,13 +1,44 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container-fluid" style="background-color:#CDCDCD; max-width:1750px">
+	<div class="row mt-5" style="background-color: rgba(255,0,0,0.1);">
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+		<div class="col-6 col-md-4 text-center">
+			<div class="row">
+				<div class="col-2"></div>
+				<div class="col-6 col-md-4 card bg-light" style="max-width: 18rem;">
+					<div class="card-header text-center"><%= @product.name %></div>
+					<div class="card-body">
+						<h5 class="card-title text-right"><%= @product.price %> EUR</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					</div>
+				</div>
+				<div class="col-2"></div>
+			</div>
+		</div>
 
-<%= link_to 'Back', products_path %>
+		<div class="col-6 col-md-4">
+			<%= image_tag('vodka_grey_goose.jpg', class: 'img-fluid rounded') %>
+		</div>
+
+		<div class="col-6 col-md-4">
+			<div class="row h-25">
+				Cena
+			</div>
+			<div class="row h-20">
+				Cena
+			</div>
+			<div class="row h-20">
+				Cena
+			</div>
+			<div class="row h-20">
+				Cena
+			</div>
+			<div class="row h-20">
+				Cena
+			</div>
+		</div>
+
+
+	</div>
+</div>
