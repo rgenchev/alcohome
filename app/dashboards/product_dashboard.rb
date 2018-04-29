@@ -10,10 +10,12 @@ class ProductDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     name: Field::String,
-    price: Field::String.with_options(searchable: false),
+    price: Field::Number,
     category: Field::BelongsTo,
     vendor: Field::BelongsTo,
     image: PaperclipField,
+    on_sale: Field::Boolean,
+    on_sale_price: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -29,6 +31,8 @@ class ProductDashboard < Administrate::BaseDashboard
     :price,
     :category,
     :vendor,
+    :on_sale,
+    :on_sale_price
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -40,6 +44,8 @@ class ProductDashboard < Administrate::BaseDashboard
     :category,
     :vendor,
     :image,
+    :on_sale,
+    :on_sale_price,
     :created_at,
     :updated_at,
   ].freeze
@@ -52,7 +58,9 @@ class ProductDashboard < Administrate::BaseDashboard
     :price,
     :category,
     :vendor,
-    :image
+    :image,
+    :on_sale,
+    :on_sale_price
   ].freeze
 
   # Overwrite this method to customize how products are displayed
