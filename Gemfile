@@ -30,6 +30,8 @@ gem "pundit"
 
 gem 'friendly_id', '~> 5.1.0'
 
+gem "paperclip", "~> 6.0.0"
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
@@ -40,3 +42,6 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'pg'
+end

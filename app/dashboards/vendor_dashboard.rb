@@ -52,6 +52,6 @@ class VendorDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
   def display_resource(vendor)
-    "Vendor #{vendor.name}"
+    "#{vendor.name}"
   end
 end

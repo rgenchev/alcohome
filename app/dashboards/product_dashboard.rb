@@ -13,6 +13,7 @@ class ProductDashboard < Administrate::BaseDashboard
     price: Field::String.with_options(searchable: false),
     category: Field::BelongsTo,
     vendor: Field::BelongsTo,
+    image: PaperclipField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -27,7 +28,7 @@ class ProductDashboard < Administrate::BaseDashboard
     :name,
     :price,
     :category,
-    :vendor
+    :vendor,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -38,6 +39,7 @@ class ProductDashboard < Administrate::BaseDashboard
     :price,
     :category,
     :vendor,
+    :image,
     :created_at,
     :updated_at,
   ].freeze
@@ -50,12 +52,13 @@ class ProductDashboard < Administrate::BaseDashboard
     :price,
     :category,
     :vendor,
+    :image
   ].freeze
 
   # Overwrite this method to customize how products are displayed
   # across all pages of the admin dashboard.
   #
   def display_resource(product)
-    "Product #{product.name}"
+    "#{product.name}"
   end
 end

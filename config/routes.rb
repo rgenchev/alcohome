@@ -1,14 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'static_pages#home'
-
-  get 'about', to: 'static_pages#about'
-  get 'contact', to: 'static_pages#contact'
-
   devise_for :users, skip: [:registrations, :passwords]
-
-  resources :categories, only: [:index, :show]
-  resources :products, only: [:index, :show]
-  resources :vendors, only: [:index, :show]
 
   namespace :admin do
     resources :users
@@ -19,5 +10,14 @@ Rails.application.routes.draw do
     root to: "users#index"
   end
 
-  get '*path' => redirect('/')
+  scope "(:locale)" do
+    resources :categories, only: [:index, :show]
+    resources :products, only: [:index, :show]
+    resources :vendors, only: [:index, :show]
+
+    get 'about', to: 'static_pages#about'
+    get 'contact', to: 'static_pages#contact'
+
+    root to: 'static_pages#home'
+  end
 end
