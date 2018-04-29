@@ -11,6 +11,7 @@ class CategoryDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     products: Field::HasMany,
+    image: PaperclipField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -33,6 +34,7 @@ class CategoryDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :products,
+    :image,
     :created_at,
     :updated_at,
   ].freeze
@@ -43,6 +45,7 @@ class CategoryDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :name,
     :products,
+    :image
   ].freeze
 
   # Overwrite this method to customize how categories are displayed
