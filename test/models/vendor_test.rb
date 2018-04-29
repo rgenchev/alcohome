@@ -9,7 +9,7 @@ class VendorTest < ActiveSupport::TestCase
   end
   
   test "should not save vendor without name" do
-    vendor = Category.new
+    vendor = Vendor.new
 
     assert_not vendor.save
 

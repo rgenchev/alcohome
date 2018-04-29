@@ -4,7 +4,7 @@ class ProductTest < ActiveSupport::TestCase
   include ActionDispatch::TestProcess
   
   setup do
-    @category = Category.create(name: "Category")
+    @category = Category.create!(name: "Category", image: fixture_file_upload('images/test_category_image.jpg'))
     @vendor = Vendor.create(name: "Vendor")
   end
 
@@ -31,7 +31,7 @@ class ProductTest < ActiveSupport::TestCase
     product.vendor = @vendor
     assert_not product.save
 
-    product.image = fixture_file_upload 'images/test_image.jpg'
+    product.image = fixture_file_upload 'images/test_product_image.jpg'
     assert product.save
   end
 end

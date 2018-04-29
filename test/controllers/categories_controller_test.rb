@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CategoriesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @category = Category.create!(name: "Vodka")
+    @category = Category.create!(name: "Vodka", image: fixture_file_upload('images/test_category_image.jpg'))
   end
 
   test "should get index" do
