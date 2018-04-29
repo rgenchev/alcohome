@@ -17,16 +17,16 @@
         </li>
       <% end %>
 
-      <% if current_user && current_user.admin? %>
-        <li class="nav-item">
-          <strong><%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: 'nav-link' %></strong>
-        </li>
-      <% end %>
-
       <% if I18n.locale == I18n.default_locale %>
         <strong><%= link_to "Deutsch", { locale: :de }, class: 'nav-link' %></strong>
       <% else %>
         <strong><%= link_to "English", { locale: :en }, class: 'nav-link' %></strong>
+      <% end %>
+
+      <% if current_user && current_user.admin? %>
+        <li class="nav-item">
+          <strong><%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: 'nav-link' %></strong>
+        </li>
       <% end %>
     </ul>
   </div>
