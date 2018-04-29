@@ -13,4 +13,7 @@ class Product < ApplicationRecord
   validates :category, presence: true
   validates :vendor, presence: true
   validates :image, presence: true
+
+  validates :on_sale, presence: true, :if => :on_sale_price?
+  validates :on_sale_price, presence: true, :if => :on_sale?
 end
