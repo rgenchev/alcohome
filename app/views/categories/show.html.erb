@@ -10,7 +10,8 @@
   <% @category.products.each do |product| %>
     <div class="col-md-4 text-center">
       <a href="<%= product_path(product) %>">
-        <div class="hoverable-field-wrapper mb-5">
+        <div id="parent" class="hoverable-field-wrapper mb-5">
+          <div id="child" class="corner-ribbon top-right red shadow">20% OFF</div>
           <%= image_tag(product.image.url, height: '55%', width: '55%', class: 'hoverable-image img-fluid rounded') %>
           <div class="hoverable-field-text-wrapper">
             <div class="product-details">
