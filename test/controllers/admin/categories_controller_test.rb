@@ -7,7 +7,7 @@ class Admin::CategoriesControllerTest < ActionDispatch::IntegrationTest
     @admin = User.create(email: "admin@example.com", password: "password", role: "admin")
     @user = User.create(email: "user@example.com", password: "password", role: "user")
 
-    @category = Category.create!(name: "Vodka")
+    @category = Category.create!(name: "Vodka", image: fixture_file_upload('images/test_category_image.jpg'))
   end
 
   test "should get index" do
@@ -28,7 +28,7 @@ class Admin::CategoriesControllerTest < ActionDispatch::IntegrationTest
     sign_in(@admin)
 
     assert_difference('Category.count') do
-      post admin_categories_url, params: { category: { name: @category.name } }
+      post admin_categories_url, params: { category: { name: @category.name, image: fixture_file_upload('images/test_category_image.jpg') } }
     end
 
     assert_redirected_to admin_category_url(Category.last)
@@ -88,7 +88,7 @@ class Admin::CategoriesControllerTest < ActionDispatch::IntegrationTest
     sign_in(@user)
 
     assert_no_difference('Category.count') do
-      post admin_categories_url, params: { category: { name: @category.name } }
+      post admin_categories_url, params: { category: { name: @category.name, image: fixture_file_upload('images/test_category_image.jpg') } }
     end
 
     assert_redirected_to "/"

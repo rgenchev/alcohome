@@ -7,9 +7,9 @@ class Admin::ProductsControllerTest < ActionDispatch::IntegrationTest
     @admin = User.create(email: "admin@example.com", password: "password", role: "admin")
     @user = User.create(email: "user@example.com", password: "password", role: "user")
 
-    @category = Category.create(name: "Vodka")
+    @category = Category.create!(name: "Vodka", image: fixture_file_upload('images/test_category_image.jpg'))
     @vendor = Vendor.create(name: "Vendor")
-    @product = Product.create(name: "Grey Goose", price: 35.00, category: @category, vendor: @vendor, image: fixture_file_upload('images/test_image.jpg'))
+    @product = Product.create(name: "Grey Goose", price: 35.00, category: @category, vendor: @vendor, image: fixture_file_upload('images/test_product_image.jpg'))
   end
 
   test "should get index" do
@@ -30,7 +30,7 @@ class Admin::ProductsControllerTest < ActionDispatch::IntegrationTest
     sign_in(@admin)
 
     assert_difference('Product.count') do
-      post admin_products_url, params: { product: { name: "Belvedere", price: 39.99, category_id: @category.id, vendor_id: @vendor.id, image: fixture_file_upload('images/test_image.jpg') } }
+      post admin_products_url, params: { product: { name: "Belvedere", price: 39.99, category_id: @category.id, vendor_id: @vendor.id, image: fixture_file_upload('images/test_product_image.jpg') } }
     end
 
     assert_redirected_to admin_product_url(Product.last)
@@ -89,7 +89,7 @@ class Admin::ProductsControllerTest < ActionDispatch::IntegrationTest
     sign_in(@user)
 
     assert_no_difference('Product.count') do
-      post admin_products_url, params: { product: { name: "Belvedere", price: 39.99, category_id: @category.id, vendor_id: @vendor.id, image: fixture_file_upload('images/test_image.jpg') } }
+      post admin_products_url, params: { product: { name: "Belvedere", price: 39.99, category_id: @category.id, vendor_id: @vendor.id, image: fixture_file_upload('images/test_product_image.jpg') } }
     end
 
     assert_redirected_to "/"

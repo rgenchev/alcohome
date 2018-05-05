@@ -4,7 +4,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   setup do
     category = Category.create(name: "Vodka")
     vendor = Vendor.create(name: "Grey Goose")
-    @product = Product.create(name: "Grey Goose", price: 35.00, category: category, vendor: vendor, image: fixture_file_upload('images/test_image.jpg'))
+    @product = Product.create(name: "Grey Goose", price: 35.00, category: category, vendor: vendor, image: fixture_file_upload('images/test_product_image.jpg'))
   end
 
   test "should get index" do

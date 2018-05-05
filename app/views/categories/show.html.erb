@@ -19,7 +19,10 @@
             </div>
           </div>
           <h4><%= product.name %></h4>
-          <p><%= product.price %> EUR</p>
+          <p class="<%= 'line-through' if product.on_sale %>"><%= product.price %> EUR</p>
+          <% if product.on_sale %>
+            <p class="on-sale-price"><%= product.on_sale_price %> EUR</p>
+          <% end %>
         </div>
       </a>
     </div>

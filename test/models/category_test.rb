@@ -1,26 +1,30 @@
 require 'test_helper'
 
 class CategoryTest < ActiveSupport::TestCase
+  include ActionDispatch::TestProcess
+
   test "should have the necessary required validators" do
     category = Category.new
 
     assert_not category.valid?
-    assert_equal [:name], category.errors.keys
+    assert_equal [:name, :image], category.errors.keys
   end
   
-  test "should not save category without name" do
+  test "should not save category without name and image" do
     category = Category.new
 
     assert_not category.save
 
     category.name = "Gin"
 
-    assert category.save
+    assert_not category.save
+
+    category.image = fixture_file_upload 'images/test_category_image.jpg'
   end
 
   test "only 9 categories (at least for now) should be limited" do
     9.times do
-      Category.create!(name: "#{rand(10000)}")
+      Category.create!(name: "#{rand(10000)}", image: fixture_file_upload('images/test_category_image.jpg'))
     end
 
     category = Category.new(name: "AF")
