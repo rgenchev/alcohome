@@ -8,25 +8,6 @@
 
 <div class="row">
   <% @category.products.each do |product| %>
-    <div id="parent" class="col-md-4 text-center">
-      <a href="<%= product_path(product) %>">
-        <div class="hoverable-field-wrapper mb-5">
-          <% if product.on_sale %>
-            <div id="child" class="corner-ribbon top-right red shadow">20% OFF</div>
-          <% end %>
-          <%= image_tag(product.image.url, height: '55%', width: '55%', class: 'hoverable-image img-fluid rounded') %>
-          <div class="hoverable-field-text-wrapper">
-            <div class="product-details">
-              <strong><i class="fa fa-eye"></i> <%= link_to t('.product_details'), product_path(product) %></strong>
-            </div>
-          </div>
-          <h4><%= product.name %></h4>
-          <p class="<%= 'line-through' if product.on_sale %>">&euro;<%= product.price %></p>
-          <% if product.on_sale %>
-            <p class="on-sale-price">&euro;<%= product.on_sale_price %></p>
-          <% end %>
-        </div>
-      </a>
-    </div>
+    <%= render partial: "products/product", locals: { product: product } %>
   <% end %>
 </div>
