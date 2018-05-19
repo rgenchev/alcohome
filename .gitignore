@@ -18,3 +18,4 @@
 /config/secrets.yml
 /node_modules
 /public/system
+/config/database.yml
