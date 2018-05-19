@@ -1,6 +1,6 @@
-role :app, %w{root@alcohome}
-role :web, %w{root@alcohome}
-role :db,  %w{root@alcohome}
+role :app, %w{alcohome@alcohome}
+role :web, %w{alcohome@alcohome}
+role :db,  %w{alcohome@alcohome}
 
 # server-based syntax
 # ======================
