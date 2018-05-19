@@ -1,7 +1,7 @@
 {
 	"name": "alcohome",
 	"engines": {
-		"node": "^9.3.0"
+		"node": "^10.1.0"
 	},
   "dependencies": {
     "typed.js": "^2.0.6"
