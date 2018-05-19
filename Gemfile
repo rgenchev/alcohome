@@ -21,8 +21,6 @@ gem 'tzinfo-data'
 gem "administrate"
 gem 'devise'
 
-gem 'puma'
-
 gem 'bootstrap', '~> 4.0.0'
 gem "font-awesome-rails"
 
@@ -33,6 +31,7 @@ gem 'friendly_id', '~> 5.1.0'
 gem "paperclip", "~> 6.0.0"
 
 group :development, :test do
+  gem 'puma'
   gem 'sqlite3'
   gem 'byebug'
 end
@@ -40,6 +39,12 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger', '>= 0.1.1'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
 end
 
 group :production do
