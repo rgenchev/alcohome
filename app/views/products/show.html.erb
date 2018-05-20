@@ -7,15 +7,14 @@
 			<%= image_tag(@product.image.url, class: 'img-fluid rounded') %>
 		</div>
 
-		<div class="col-md-6 mr-auto mt-3" style="max-width: 30rem;">
-			<div class="card">
-				<div class="card-header text-center"><%= @product.name %></div>
-				<div class="card-body">
-					<h5 class="card-title text-right"><%= @product.price %> EUR</h5>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's contentSome quick example text to build on the card title and make up the bulk of the card's contentSome quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-				</div>
-			</div>
+		<div class="col-md-6 mr-auto mt-3 align-self-start" style="max-width: 30rem;">
+			<h4><%= @product.vendor.name %> <%= @product.name %></h4>
+		    <% if @product.on_sale %>
+		       <div class="price on-sale-price">Now &euro;<%= @product.on_sale_price %></div>
+		    <% end %>
+		    <div class="price <%= 'line-through' if @product.on_sale %>">
+		    	&euro;<%= @product.price %>
+		    </div>
 		</div>
 	</div>
 </div>
