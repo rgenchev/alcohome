@@ -43,6 +43,12 @@ en:
   static_pages:
     about:
       title: "Who are we and what's our mission?"
+      first_paragraph: "AlcoHome is a company that was founded in 2017, by a young, dynamic and customer oriented team. As alcohol possesses a given significance in modern society it would be unthinkable to not have it around. Regardless of the occasion being a family event, birthday or Christmas party, as well as an evening with friends or a date night out, such moments usually address rounded up best by having the right selection of spirits wine or beer within reach."
+      second_paragraph: "To grasp those moment best, we are as customer oriented as possible."
+      third_paragraph: "As customer satisfaction is of utmost importance to us, we’d like to draw as much attention to it as possible and, therefore, aim for personal contact to be able to provide the best support possible."
+      fourth_paragraph: "To be able to guarantee smooth, quick and spontaneous deliveries, AlcoHome utilizes two storage facilities, in Vienna and Schwechat, respectively, and offers 24/7 assistance."
+      fifth_paragraph: "The drink you are looking for is not mentioned in our catalogue? No problem, just contact us right away and we’ll most happily do our very best to satisfy your request!"
+      sixth_paragraph: "We hope to have caught your interest and wish you a lot of fun going through our catalogue."
     home:
       first_subtitle: "What should it be?"
       on_sale_products_subtitle: "Products on Sale"
