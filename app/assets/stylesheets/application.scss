@@ -6,9 +6,6 @@
 *{
   margin: 0;
   padding: 0;
-
-  overflow:scroll
-	-webkit-overflow-scrolling: touch;
 }
 
 body{
@@ -165,6 +162,11 @@ a:active {
 
 	.contact-email, .contact-phone-number, .contact-address {
 		font-size: 1.1rem;
+	}
+
+	body {
+		overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
 	}
 }
 
