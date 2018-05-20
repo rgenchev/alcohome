@@ -6,7 +6,7 @@
 	</div>
 </div>
 
-<div class="row">
+<div class="row justify-content-md-center">
   <% @category.products.each do |product| %>
     <%= render partial: "products/product", locals: { product: product } %>
   <% end %>

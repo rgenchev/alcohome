@@ -10,11 +10,12 @@
           <strong><i class="fa fa-eye"></i> <%= link_to t('.product_details'), product_path(product) %></strong>
         </div>
       </div>
+      <p></p>
       <h4><%= product.name %></h4>
-      <p class="<%= 'line-through' if product.on_sale %>">&euro;<%= product.price %></p>
       <% if product.on_sale %>
-        <p class="on-sale-price">&euro;<%= product.on_sale_price %></p>
+        <div class="price on-sale-price">Now &euro;<%= product.on_sale_price %></div>
       <% end %>
+      <div class="price <%= 'line-through' if product.on_sale %>">&euro;<%= product.price %></div>
     </div>
   </a>
 </div>
