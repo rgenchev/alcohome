@@ -2,12 +2,7 @@ require 'test_helper'
 
 class VendorsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @vendor = Vendor.create(name: "Coca-Cola")
-  end
-
-  test "should get index" do
-    get vendors_url
-    assert_response :success
+    @vendor = Vendor.create!(name: "Coca-Cola")
   end
 
   test "should show vendor" do
