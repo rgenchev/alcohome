@@ -72,6 +72,7 @@ body {
 .price {
   font-family: 'Tahoma', sans-serif;
   font-size: 1.4rem;
+  color: #b12704;
 }
 
 a:link {
@@ -136,8 +137,8 @@ a:active {
 	font-size: 5rem;
 }
 
-#about-heading, #contact-heading {
-	font-size: 4rem;
+.page-title {
+	font-size: 3rem;
 }
 
 .fb-ic {
@@ -161,7 +162,7 @@ a:active {
 		font-size: 3.5rem;
 	}
 
-	#about-heading, #contact-heading {
+	.page-title {
 		font-size: 2.5rem;
 	}
 
