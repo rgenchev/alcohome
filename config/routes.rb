@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   scope "(:locale)" do
     resources :categories, only: [:index, :show]
     resources :products, only: [:show]
-    resources :vendors, only: [:index, :show]
+    resources :vendors, only: [:show]
 
     get 'about', to: 'static_pages#about'
     get 'contact', to: 'static_pages#contact'
