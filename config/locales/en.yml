@@ -25,10 +25,15 @@ en:
     index:
       title: "Categories"
     show:
+      wine_category_first_paragraph: "“VINUM BONUM DEORUM DONUM”"
+      wine_category_second_paragraph: "“EIN GUTER WEIN IST EIN GESCHENK DER GÖTTER”"
+      wine_category_third_paragraph: "Unser umfangreiches Sortiment umfasst eine exklusive Selektion regionaler sowie internationaler Rot- und Weißweine, die wir gerne auf Nachfrage bereitstellen."
+      wine_category_fourth_paragraph: "Die Preise werden anhand der individuellen Wünsche Ihres Kunden angepasst."
+  products:
+    index:
+    show:
+    product:
       product_details: "Product Details"
-  # products:
-  #   index:
-  #   show:
   shared:
     footer:
       categories: "Categories"
