@@ -18,9 +18,13 @@
       <% end %>
 
       <% if I18n.locale == I18n.default_locale %>
-        <%= link_to "Deutsch", { locale: :de }, class: 'nav-link font-weight-bold' %>
+        <li class="nav-item">
+          <%= link_to "Deutsch", { locale: :de }, class: 'nav-link font-weight-bold' %>
+        </li>
       <% else %>
-        <%= link_to "English", { locale: :en }, class: 'nav-link font-weight-bold' %>
+        <li class="nav-item">
+          <%= link_to "English", { locale: :en }, class: 'nav-link font-weight-bold' %>
+        </li>
       <% end %>
 
       <% if current_user && current_user.admin? %>
