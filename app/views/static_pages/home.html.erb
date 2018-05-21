@@ -75,7 +75,7 @@
 
   <%= render partial: "shared/horizontal_line", locals: { width: 90 } %>
 
-  <div class="row text-center">
+  <div class="row text-center mt-5">
     <% @on_sale_products.each do |product| %>
       <%= render partial: "products/product", locals: { product: product } %>
     <% end %>
