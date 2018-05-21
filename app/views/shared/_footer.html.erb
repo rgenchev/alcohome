@@ -18,9 +18,8 @@
     <div class="container mt-5 mb-4 text-center text-md-left">
         <div class="row mt-3">
             <div class="col-md-6 col-lg-6 col-xl-6 mb-6">
-                <h5 class="text-uppercase font-weight-bold">
-                    <strong>Alcohome</strong>
-                </h5>
+                <h5 class="text-uppercase font-weight-bold">Alcohome</h5>
+
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 110px; height:1px; background-color: #4F7479;">
                 <p>
                   <%= link_to t('.categories'), categories_path %>
@@ -34,14 +33,13 @@
             </div>
 
             <div class="col-md-6 col-lg-6 col-xl-6">
-                <h5 class="text-uppercase font-weight-bold">
-                    <strong><%= t('.contact') %></strong>
-                </h5>
+                <h5 class="text-uppercase font-weight-bold"><%= t('.contact') %></h5>
+
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 90px; height:1px; background-color: #4F7479;">
                 <p class="contact-address">
                     <i class="fa fa-home mr-1"></i> Buchengasse 63/4, A-1100 Wien</p>
                 <p class="contact-email">
-                    <i class="fa fa-envelope mr-1"></i> <a href="mailto:contact@alcohome.at?subject=Contact using web form&body=Please send me your catalog!">contact@alcohome.at</a></p>
+                    <i class="fa fa-envelope mr-1"></i> <a href="mailto:contact@alcohome.at?subject=Contact%20using%20web%20form&body=Please%20send%20me%20your%20catalog!">contact@alcohome.at</a></p>
                 <p class="contact-phone-number">
                     <i class="fa fa-phone mr-1"></i> +43 660 83 79 626</p>
             </div>
@@ -50,8 +48,8 @@
 
     <div class="footer-copyright py-3 text-center">
       © 2018 Copyright,
-      <a href="<%= root_path %>">
-          <strong> Alcohome</strong>
+      <a href="<%= root_path %>" class="font-weight-bold">
+        Alcohome
       </a>
     </div>
 </footer>
