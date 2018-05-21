@@ -30,8 +30,8 @@ en:
       wine_category_third_paragraph: "Unser umfangreiches Sortiment umfasst eine exklusive Selektion regionaler sowie internationaler Rot- und Weißweine, die wir gerne auf Nachfrage bereitstellen."
       wine_category_fourth_paragraph: "Die Preise werden anhand der individuellen Wünsche Ihres Kunden angepasst."
   products:
-    index:
     show:
+      now: Now
     product:
       product_details: "Product Details"
   shared:
