@@ -23,12 +23,13 @@
   </div>
 </div>
 
-<div class="row text-center mt-5 mb-5">
+<div class="row text-center mt-5">
   <div class="col-md-12">
     <h2><%= t('.first_subtitle') %></h2>
-    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 90px; height:1px; background-color: #4F7479;">
   </div>
 </div>
+
+<%= render partial: "shared/horizontal_line", locals: { width: 90 } %>
 
 <div class="row text-center">
   <div class="col-md-4 mb-3">
@@ -36,7 +37,7 @@
       <div class="hoverable-field-wrapper">
         <%= image_tag(@category_random.image.url, height: '80%', width: '80%', class: 'hoverable-image img-fluid rounded') %>
         <div class="hoverable-field-text-wrapper">
-          <strong></i> <h2><%= @category_random.name %></h2></strong>
+          <h2 class="font-weight-bold"><%= @category_random.name %></h2>
         </div>
       </div>
     </a>
@@ -47,7 +48,7 @@
       <div class="hoverable-field-wrapper">
         <%= image_tag(@category_random2.image.url, height: '80%', width: '80%', class: 'hoverable-image img-fluid rounded') %>
         <div class="hoverable-field-text-wrapper">
-          <strong></i> <h2><%= @category_random2.name %></h2></strong>
+          <h2 class="font-weight-bold"><%= @category_random2.name %></h2>
         </div>
       </div>
     </a>
@@ -58,7 +59,7 @@
       <div class="hoverable-field-wrapper">
         <%= image_tag(@category_random3.image.url, height: '80%', width: '80%', class: 'hoverable-image img-fluid rounded') %>
         <div class="hoverable-field-text-wrapper">
-          <strong></i> <h2><%= @category_random3.name %></h2></strong>
+          <h2 class="font-weight-bold"><%= @category_random3.name %></h2>
         </div>
       </div>
     </a>
@@ -66,12 +67,13 @@
 </div>
 
 <% if @on_sale_products.count == 3 %>
-  <div class="row text-center mt-5 mb-5">
+  <div class="row text-center mt-5">
     <div class="col-md-12">
       <h2><%= t('.on_sale_products_subtitle') %></h2>
-      <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 90px; height:1px; background-color: #4F7479;">
     </div>
   </div>
+
+  <%= render partial: "shared/horizontal_line", locals: { width: 90 } %>
 
   <div class="row text-center">
     <% @on_sale_products.each do |product| %>

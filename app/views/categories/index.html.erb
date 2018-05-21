@@ -1,20 +1,22 @@
 <% content_for :title, t('.title') %>
 
 <div class="container">
-  <div class="row text-center mt-5 mb-5">
+  <div class="row text-center mt-5">
     <div class="col-md-12">
-      <h1 id="about-heading"><%= t('.title') %></h1>
+      <h1 class="page-title"><%= t('.title') %></h1>
     </div>
   </div>
 
+  <%= render partial: "shared/horizontal_line", locals: { width: 70 } %>
+
   <div class="row text-center">
     <% @categories.each do |category| %>
-      <div class="col-md-4 mt-3 mb-3">
+      <div class="col-md-4 mb-3">
         <a href="<%= category_path(category) %>">
           <div class="hoverable-field-wrapper">
             <%= image_tag(category.image.url, class: 'hoverable-image img-fluid rounded') %>
             <div class="hoverable-field-text-wrapper">
-              <strong></i> <h2><%= category.name %></h2></strong>
+              <h2 class="font-weight-bold"><%= category.name %></h2>
             </div>
           </div>
         </a>

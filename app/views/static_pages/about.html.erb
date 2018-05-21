@@ -3,9 +3,12 @@
 <div class="container">
   <div class="row text-center mt-3">
     <div class="col-md-12">
-      <h1 id="about-heading"><%= t('.title') %></h1>
+      <h1 class="page-title"><%= t('.title') %></h1>
     </div>
   </div>
+
+  <%= render partial: "shared/horizontal_line", locals: { width: 90 } %>
+
   <div class="jumbotron-fluid img-fluid mt-3 mb-4">
     <%= image_tag('tequila-glass.jpg', height: '100', width: '100', class: 'w-100 img-fluid') %>
   </div>

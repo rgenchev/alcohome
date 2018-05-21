@@ -1,15 +1,17 @@
 <% content_for :title, @category.name %>
 
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center mt-3">
+      <h1 class="page-title"><%= @category.name %></h1>
+    </div>
+  </div>
 
-<div class="row">
-	<div class="col-md-12 text-center pb-3">
-		<h1><strong><%= @category.name %></strong></h1>
-	</div>
-</div>
+  <%= render partial: "shared/horizontal_line", locals: { width: 60 } %>
 
-<div class="row">
-  <% @category.products.each do |product| %>
-    <%= render partial: "products/product", locals: { product: product } %>
-  <% end %>
+  <div class="row mt-5">
+    <% @category.products.each do |product| %>
+      <%= render partial: "products/product", locals: { product: product } %>
+    <% end %>
+  </div>
 </div>
