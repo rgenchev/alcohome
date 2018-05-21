@@ -9,9 +9,27 @@
 
   <%= render partial: "shared/horizontal_line", locals: { width: 60 } %>
 
-  <div class="row mt-5">
-    <% @category.products.each do |product| %>
-      <%= render partial: "products/product", locals: { product: product } %>
-    <% end %>
-  </div>
+  <% if @category.name != "Wine" %>
+    <div class="row mt-5">
+      <% @category.products.each do |product| %>
+        <%= render partial: "products/product", locals: { product: product } %>
+      <% end %>
+    </div>
+  <% else %>
+    <p>
+      <%= t('.wine_category_first_paragraph') %>
+    </p>
+
+    <p>
+      <%= t('.wine_category_second_paragraph') %>
+    </p>
+
+    <p>
+      <%= t('.wine_category_third_paragraph') %>
+    </p>
+
+    <p>
+      <%= t('.wine_category_fourth_paragraph') %>
+    </p>
+  <% end %>
 </div>
