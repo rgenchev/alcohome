@@ -1,7 +1,5 @@
 <% content_for :title, @product.name %>
 
-<p id="notice"><%= notice %></p>
-
 <div class="container-fluid">
 	<div class="row mt-5">
 
@@ -9,14 +7,18 @@
 			<%= image_tag(@product.image.url, class: 'img-fluid rounded') %>
 		</div>
 
-		<div class="col-md-6 mr-auto mt-3 align-self-start" style="max-width: 30rem;">
-			<h4><%= @product.vendor.name %> <%= @product.name %></h4>
-		    <% if @product.on_sale %>
-		       <div class="price on-sale-price">Now &euro;<%= @product.on_sale_price %></div>
-		    <% end %>
-		    <div class="price <%= 'line-through' if @product.on_sale %>">
-		    	&euro;<%= @product.price %>
-		    </div>
+		<div class="col-md-6 text-center mt-3 align-self-start">
+			<h1 class="font-weight-bold"><%= @product.name %></h1>
+      <div>
+        <i><%= link_to @product.vendor.name, vendor_path(@product.vendor) %></i> |
+        <i><%= link_to @product.category.name, category_path(@product.category) %></i>
+      </div>
+	    <% if @product.on_sale %>
+	       <div class="price on-sale-price">Now &euro;<%= @product.on_sale_price %></div>
+	    <% end %>
+	    <div class="price <%= 'line-through' if @product.on_sale %>">
+        &euro;<%= @product.price %>
+	    </div>
 		</div>
 	</div>
 </div>
