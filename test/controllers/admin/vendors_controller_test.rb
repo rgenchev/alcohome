@@ -4,8 +4,8 @@ class Admin::VendorsControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   setup do
-    @admin = User.create(email: "admin@example.com", password: "password", role: "admin")
-    @user = User.create(email: "user@example.com", password: "password", role: "user")
+    @admin = User.create!(email: "admin@example.com", password: "password", role: "admin")
+    @user = User.create!(email: "user@example.com", password: "password", role: "user")
 
     @vendor = Vendor.create(name: "Coca-Cola")
   end

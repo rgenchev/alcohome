@@ -4,8 +4,8 @@ class Admin::CategoriesControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   setup do
-    @admin = User.create(email: "admin@example.com", password: "password", role: "admin")
-    @user = User.create(email: "user@example.com", password: "password", role: "user")
+    @admin = User.create!(email: "admin@example.com", password: "password", role: "admin")
+    @user = User.create!(email: "user@example.com", password: "password", role: "user")
 
     @category = Category.create!(name: "Vodka", image: fixture_file_upload('images/test_category_image.jpg'))
   end

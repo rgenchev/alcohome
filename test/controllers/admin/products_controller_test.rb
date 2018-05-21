@@ -4,12 +4,12 @@ class Admin::ProductsControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   setup do
-    @admin = User.create(email: "admin@example.com", password: "password", role: "admin")
-    @user = User.create(email: "user@example.com", password: "password", role: "user")
+    @admin = User.create!(email: "admin@example.com", password: "password", role: "admin")
+    @user = User.create!(email: "user@example.com", password: "password", role: "user")
 
     @category = Category.create!(name: "Vodka", image: fixture_file_upload('images/test_category_image.jpg'))
-    @vendor = Vendor.create(name: "Vendor")
-    @product = Product.create(name: "Grey Goose", price: 35.00, category: @category, vendor: @vendor, image: fixture_file_upload('images/test_product_image.jpg'))
+    @vendor = Vendor.create!(name: "Vendor")
+    @product = Product.create!(name: "Grey Goose", price: 35.00, category: @category, vendor: @vendor, image: fixture_file_upload('images/test_product_image.jpg'))
   end
 
   test "should get index" do
