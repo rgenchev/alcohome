@@ -39,6 +39,7 @@ en:
       categories: "Categories"
       about: "About"
       contact: "Contact"
+      terms_of_service: "Terms of Service"
     nav:
       about: "About"
       contact: "Contact"
@@ -62,3 +63,5 @@ en:
       address: "Address"
       email: "Email"
       phone_number: "Phone number"
+    terms_of_service:
+      title: "Terms of Service"

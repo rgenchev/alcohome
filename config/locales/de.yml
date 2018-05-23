@@ -17,6 +17,7 @@ de:
       categories: "Kategorien"
       about: "Worum geht es"
       contact: "Kontakt"
+      terms_of_service: "AGB"
     nav:
       about: "Worum geht es"
       contact: "Kontakt"
@@ -40,3 +41,5 @@ de:
       address: "Adresse"
       email: "Email"
       phone_number: "Telefonnummer"
+    terms_of_service:
+      title: "AGB"
