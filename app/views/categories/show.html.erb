@@ -11,7 +11,7 @@
 
   <% if @category.name != "Wine" %>
     <div class="row mt-5">
-      <% @category.products.each do |product| %>
+      <% @category_products.each do |product| %>
         <%= render partial: "products/product", locals: { product: product } %>
       <% end %>
     </div>
