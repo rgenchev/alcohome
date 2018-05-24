@@ -38,17 +38,17 @@ en:
   shared:
     footer:
       categories: "Categories"
-      about: "About"
+      about_us: "About Us"
       contact: "Contact"
       terms_of_service: "Terms of Service"
     nav:
-      about: "About"
+      about_us: "About Us"
       contact: "Contact"
       categories: "Categories"
       all_categories: "All Categories"
       logout: "Log out"
   static_pages:
-    about:
+    about_us:
       title: "Who are we and what's our mission?"
       first_paragraph: "AlcoHome is a company that was founded in 2017, by a young, dynamic and customer oriented team. As alcohol possesses a given significance in modern society it would be unthinkable to not have it around. Regardless of the occasion being a family event, birthday or Christmas party, as well as an evening with friends or a date night out, such moments usually address rounded up best by having the right selection of spirits wine or beer within reach."
       second_paragraph: "To grasp those moment best, we are as customer oriented as possible."

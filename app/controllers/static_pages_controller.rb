@@ -9,7 +9,7 @@ class StaticPagesController < ApplicationController
     @on_sale_products = Product.order("RANDOM()").on_sale.limit(3)
 	end
 
-  def about
+  def about_us
   end
 
   def contact

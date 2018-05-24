@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resources :products, only: [:show]
     resources :vendors, only: [:show]
 
-    get 'about', to: 'static_pages#about'
+    get 'about_us', to: 'static_pages#about_us'
     get 'contact', to: 'static_pages#contact'
     get 'terms_of_service', to: 'static_pages#terms_of_service'
 

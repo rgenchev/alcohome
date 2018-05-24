@@ -16,17 +16,17 @@ de:
   shared:
     footer:
       categories: "Kategorien"
-      about: "Worum geht es"
+      about_us: "Über uns"
       contact: "Kontakt"
       terms_of_service: "AGB"
     nav:
-      about: "Worum geht es"
+      about_us: "Über uns"
       contact: "Kontakt"
       categories: "Kategorien"
       all_categories: "Alle Kategorien"
       logout: "Ausloggen"
   static_pages:
-    about:
+    about_us:
       title: "Wer sind wir und was ist unsere Mission?"
       first_paragraph: "Alcohome ist ein Unternehmen, das 2017 von einem jungen, dynamischen und kundenorientierten Team gegründet wurde. Der Alkohol hat einen besonderen Stellenwert in unserer modernen Gesellschaft und ist aus unserem Leben kaum noch wegzudenken. Ob eine Familien-, Geburtstags- oder Weihnachtsfeier, ein ausgiebiges Abendessen zu Zweit, ein lustiger Abend mit Freunden; solch’ schöne Momente werden meist mit einem guten Tropfen abgerundet."
       second_paragraph: "Daher wollen wir uns ganz den Bedürfnissen unserer Kunden widmen, um diese Momente noch schöner zu gestalten."
