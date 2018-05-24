@@ -9,11 +9,7 @@
 
   <%= render partial: "shared/horizontal_line", locals: { width: 60 } %>
 
-  <% if @category.name == "Beer" %>
-    <p class="text-center">
-      <%= t('.beer_category_text') %>
-    </p>
-  <% elsif @category.name == "Wine" %>
+  <% if @category.name == "Wine" %>
     <div class="mt-2 mb-5">
       <p class="text-center">
         <%= t('.wine_category_first_paragraph') %>
@@ -32,6 +28,12 @@
       </p>
     </div>
   <% else %>
+    <% if @category.name == "Beer" %>
+      <p class="text-center">
+        <%= t('.beer_category_text') %>
+      </p>
+    <% end %>
+
     <div class="row mt-5">
       <% @category_products.each do |product| %>
         <%= render partial: "products/product", locals: { product: product } %>
