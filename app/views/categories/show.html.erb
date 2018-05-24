@@ -9,27 +9,33 @@
 
   <%= render partial: "shared/horizontal_line", locals: { width: 60 } %>
 
-  <% if @category.name != "Wine" %>
+  <% if @category.name == "Beer" %>
+    <p class="text-center">
+      <%= t('.beer_category_text') %>
+    </p>
+  <% elsif @category.name == "Wine" %>
+    <div class="wine-text-wrapper">
+      <p class="text-center">
+        <%= t('.wine_category_first_paragraph') %>
+      </p>
+
+      <p class="text-center">
+        <%= t('.wine_category_second_paragraph') %>
+      </p>
+
+      <p class="text-center">
+        <%= t('.wine_category_third_paragraph') %>
+      </p>
+
+      <p class="text-center">
+        <%= t('.wine_category_fourth_paragraph') %>
+      </p>
+    </div>
+  <% else %>
     <div class="row mt-5">
       <% @category_products.each do |product| %>
         <%= render partial: "products/product", locals: { product: product } %>
       <% end %>
     </div>
-  <% else %>
-    <p>
-      <%= t('.wine_category_first_paragraph') %>
-    </p>
-
-    <p>
-      <%= t('.wine_category_second_paragraph') %>
-    </p>
-
-    <p>
-      <%= t('.wine_category_third_paragraph') %>
-    </p>
-
-    <p>
-      <%= t('.wine_category_fourth_paragraph') %>
-    </p>
   <% end %>
 </div>
