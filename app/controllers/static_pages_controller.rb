@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
 	def home
-    @categories = Category.where.not(name: "Soft Drinks")
+    @categories = Category.where.not(name: ["Spirits", "Minis"])
     @arr = @categories.to_a.sample 3
 
     @category_random = @arr[0]
