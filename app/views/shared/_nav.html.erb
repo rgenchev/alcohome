@@ -19,11 +19,11 @@
 
       <% if I18n.locale == I18n.default_locale %>
         <li class="nav-item">
-          <%= link_to "Deutsch", { locale: :de }, class: 'nav-link font-weight-bold' %>
+          <%= link_to image_tag('de.png'), { locale: :de }, class: 'nav-link' %>
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "English", { locale: :en }, class: 'nav-link font-weight-bold' %>
+          <%= link_to image_tag('en.png'), { locale: :en }, class: 'nav-link' %>
         </li>
       <% end %>
 
