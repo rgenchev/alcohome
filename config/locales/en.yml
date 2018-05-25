@@ -65,6 +65,8 @@ en:
       fifth_paragraph: "The drink you are looking for is not mentioned in our catalogue? No problem, just contact us right away and we’ll most happily do our very best to satisfy your request!"
       sixth_paragraph: "We hope to have caught your interest and wish you a lot of fun going through our catalogue."
     home:
+      first_autotyped_sentence: "Buying alcohol has never been easier!"
+      second_autotyped_sentence: "We have the best prices!"
       first_subtitle: "What should it be?"
       on_sale_products_subtitle: "Products on Sale"
       category_champagne_name: "Champagne"
