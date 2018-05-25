@@ -14,7 +14,7 @@ class Category < ApplicationRecord
   private
 
     def limited_categories
-      if Category.count == 11
+      if Category.count == 12
         errors[:base] << "There is a limited number of categories."
       end
     end
