@@ -10,7 +10,7 @@ de:
       category_rum_name: "Rum"
       category_booze_name: "Schnaps"
       category_minis_name: "Minis"
-      category_soft_drinks_name: "AF"
+      category_soft_name: "AF"
       category_snacks_name: "Snacks"
       category_beer_name: "Bier"
     show:
@@ -22,7 +22,7 @@ de:
       category_rum_name: "Rum"
       category_booze_name: "Schnaps"
       category_minis_name: "Minis"
-      category_soft_drinks_name: "AF"
+      category_soft_name: "AF"
       category_snacks_name: "Snacks"
       category_beer_name: "Bier"
       beer_category_text: "Weitere Biermarken auf Anfrage"
@@ -55,7 +55,7 @@ de:
       category_rum_name: "Rum"
       category_booze_name: "Schnaps"
       category_minis_name: "Minis"
-      category_soft_drinks_name: "AF"
+      category_soft_name: "AF"
       category_snacks_name: "Snacks"
       category_beer_name: "Bier"
   static_pages:
@@ -80,7 +80,7 @@ de:
       category_rum_name: "Rum"
       category_booze_name: "Schnaps"
       category_minis_name: "Minis"
-      category_soft_drinks_name: "AF"
+      category_soft_name: "AF"
       category_snacks_name: "Snacks"
       category_beer_name: "Bier"
     contact:

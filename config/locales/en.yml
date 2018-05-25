@@ -10,7 +10,7 @@ en:
       category_rum_name: "Rum"
       category_booze_name: "Booze"
       category_minis_name: "Minis"
-      category_soft_drinks_name: "Soft Drinks"
+      category_soft_name: "Soft Drinks"
       category_snacks_name: "Snacks"
       category_beer_name: "Beer"
     show:
@@ -22,7 +22,7 @@ en:
       category_rum_name: "Rum"
       category_booze_name: "Booze"
       category_minis_name: "Minis"
-      category_soft_drinks_name: "Soft Drinks"
+      category_soft_name: "Soft Drinks"
       category_snacks_name: "Snacks"
       category_beer_name: "Beer"
       beer_category_text: "Further beer brands on request"
@@ -55,7 +55,7 @@ en:
       category_rum_name: "Rum"
       category_booze_name: "Booze"
       category_minis_name: "Minis"
-      category_soft_drinks_name: "Soft Drinks"
+      category_soft_name: "Soft Drinks"
       category_snacks_name: "Snacks"
       category_beer_name: "Beer"
   static_pages:
@@ -80,7 +80,7 @@ en:
       category_rum_name: "Rum"
       category_booze_name: "Booze"
       category_minis_name: "Minis"
-      category_soft_drinks_name: "Soft Drinks"
+      category_soft_name: "Soft Drinks"
       category_snacks_name: "Snacks"
       category_beer_name: "Beer"
     contact:
