@@ -37,7 +37,7 @@
       <div class="hoverable-field-wrapper">
         <%= image_tag(@category_random.image.url, height: '80%', width: '80%', class: 'hoverable-image img-fluid rounded') %>
         <div class="hoverable-field-text-wrapper">
-          <h2 class="font-weight-bold"><%= @category_random.name %></h2>
+          <h2 class="font-weight-bold"><%= t(".category_#{@category_random.name.downcase}_name") %></h2>
         </div>
       </div>
     </a>
@@ -48,7 +48,7 @@
       <div class="hoverable-field-wrapper">
         <%= image_tag(@category_random2.image.url, height: '80%', width: '80%', class: 'hoverable-image img-fluid rounded') %>
         <div class="hoverable-field-text-wrapper">
-          <h2 class="font-weight-bold"><%= @category_random2.name %></h2>
+          <h2 class="font-weight-bold"><%= t(".category_#{@category_random2.name.downcase}_name") %></h2>
         </div>
       </div>
     </a>
@@ -59,7 +59,7 @@
       <div class="hoverable-field-wrapper">
         <%= image_tag(@category_random3.image.url, height: '80%', width: '80%', class: 'hoverable-image img-fluid rounded') %>
         <div class="hoverable-field-text-wrapper">
-          <h2 class="font-weight-bold"><%= @category_random3.name %></h2>
+          <h2 class="font-weight-bold"><%= t(".category_#{@category_random3.name.downcase}_name") %></h2>
         </div>
       </div>
     </a>

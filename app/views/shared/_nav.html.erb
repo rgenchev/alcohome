@@ -13,7 +13,7 @@
     <ul class="navbar-nav ml-auto">
       <% Category.where.not(name: "Soft Drinks").each do |category| %>
         <li class="nav-item">
-          <%= link_to "#{category.name}", category_path(category), class: 'nav-link' %>
+          <%= link_to t(".category_#{category.name.downcase}_name"), category_path(category), class: 'nav-link' %>
         </li>
       <% end %>
 

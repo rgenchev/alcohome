@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row text-center mt-3">
     <div class="col-md-12">
-      <h1 class="page-title"><%= @category.name %></h1>
+      <h1 class="page-title"><%= t(".category_#{@category.name.downcase}_name") %></h1>
     </div>
   </div>
 
