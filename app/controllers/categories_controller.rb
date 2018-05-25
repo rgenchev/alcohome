@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.friendly.find(params[:id])
 
-    @category_products = @category.products.order("RANDOM()")
+    @category_products = @category.products
 
     authorize @category
   end
