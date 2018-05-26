@@ -25,7 +25,7 @@ de:
       category_soft_name: "AF"
       category_snacks_name: "Snacks"
       category_beer_name: "Bier"
-      beer_category_text: "Weitere Biermarken auf Anfrage"
+      category_additional_text: "Weitere Marken auf Anfrage"
       wine_category_first_paragraph: "“VINUM BONUM DEORUM DONUM”"
       wine_category_second_paragraph: "“EIN GUTER WEIN IST EIN GESCHENK DER GÖTTER”"
       wine_category_third_paragraph: "Unser umfangreiches Sortiment umfasst eine exklusive Selektion regionaler sowie internationaler Rot- und Weißweine, die wir gerne auf Nachfrage bereitstellen."

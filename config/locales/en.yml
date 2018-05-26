@@ -25,7 +25,7 @@ en:
       category_soft_name: "Soft Drinks"
       category_snacks_name: "Snacks"
       category_beer_name: "Beer"
-      beer_category_text: "Further beer brands on request"
+      category_additional_text: "Further brands on request"
       wine_category_first_paragraph: "“VINUM BONUM DEORUM DONUM”"
       wine_category_second_paragraph: "“A GOOD WINE IS A GIFT OF THE GODS”"
       wine_category_third_paragraph: "Our broad assortment includes an exquisite selection of regional as well as international red and white wines, all of which we happily provide upon request."

@@ -28,11 +28,9 @@
       </p>
     </div>
   <% else %>
-    <% if @category.name == "Beer" %>
-      <p class="text-center">
-        <%= t('.beer_category_text') %>
-      </p>
-    <% end %>
+    <p class="text-center">
+      <%= t('.category_additional_text') %>
+    </p>
 
     <div class="row mt-5">
       <% @category_products.each do |product| %>
