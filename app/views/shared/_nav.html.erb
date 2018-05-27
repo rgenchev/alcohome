@@ -1,56 +1,14 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
   <%= link_to image_tag('alcohome_logo_transparent.png', height: '70', width: '70'), root_path, class: 'navbar-brand' %>
-  
+
   <button class="navbar-toggler">
     <span class="navbar-toggler-icon" onclick="openNav()"></span>
   </button>
 
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav collapse navbar-collapse">
     <ul class="navbar-nav ml-auto">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-      <%= link_to t(".category_whiskey_name"), category_path(Category.find_by(name: "Whiskey")) %>
-
-      <%= link_to t(".category_wine_name"), category_path(Category.find_by(name: "Wine")) %>
-
-      <%= link_to t(".category_champagne_name"), category_path(Category.find_by(name: "Champagne")) %>
-
-      <%= link_to t(".category_beer_name"), category_path(Category.find_by(name: "Beer")) %>
-
-      <li class="dropdown">
-        <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Spirits
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to t(".category_vodka_name"), category_path(Category.find_by(name: "Vodka")), class: "dropdown-item" %>
-          <%= link_to t(".category_rum_name"), category_path(Category.find_by(name: "Rum")), class: "dropdown-item" %>
-          <%= link_to t(".category_gin_name"), category_path(Category.find_by(name: "Gin")), class: "dropdown-item" %>
-          <%= link_to t(".category_tequila_name"), category_path(Category.find_by(name: "Tequila")), class: "dropdown-item" %>
-          <%= link_to t(".category_absinthe_name"), category_path(Category.find_by(name: "Absinthe")), class: "dropdown-item" %>
-          <%= link_to t(".category_minis_name"), category_path(Category.find_by(name: "Minis")), class: "dropdown-item" %>
-        </div>
-      </li>
-
-      <%= link_to t(".category_liquor_name"), category_path(Category.find_by(name: "Liquor")) %>
-
-      <%= link_to t(".category_soft_name"), category_path(Category.find_by(name: "Soft")) %>
-
-      <%= link_to t(".category_snacks_name"), category_path(Category.find_by(name: "Snacks")) %>
-
-      <% if I18n.locale == I18n.default_locale %>
-        <%= link_to image_tag('de.png'), { locale: :de } %>
-      <% else %>
-        <%= link_to image_tag('en.png'), { locale: :en } %>
-      <% end %>
-
-      <% if current_user && current_user.admin? %>
-        <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: 'font-weight-bold' %>
-      <% end %>
-    </ul>
-  </div>
-
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <%= link_to t(".category_whiskey_name"), category_path(Category.find_by(name: "Whiskey")), class: 'nav-link' %>
       </li>
