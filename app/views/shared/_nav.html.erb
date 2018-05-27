@@ -17,8 +17,6 @@
 
       <%= link_to t(".category_beer_name"), category_path(Category.find_by(name: "Beer")) %>
 
-      <%= link_to t(".category_liquor_name"), category_path(Category.find_by(name: "Liquor")) %>
-
       <li class="dropdown">
         <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Spirits
@@ -32,6 +30,8 @@
           <%= link_to t(".category_minis_name"), category_path(Category.find_by(name: "Minis")), class: "dropdown-item" %>
         </div>
       </li>
+
+      <%= link_to t(".category_liquor_name"), category_path(Category.find_by(name: "Liquor")) %>
 
       <%= link_to t(".category_soft_name"), category_path(Category.find_by(name: "Soft")) %>
 
@@ -67,10 +67,6 @@
         <%= link_to t(".category_beer_name"), category_path(Category.find_by(name: "Beer")), class: 'nav-link' %>
       </li>
 
-      <li class="nav-item">
-        <%= link_to t(".category_liquor_name"), category_path(Category.find_by(name: "Liquor")), class: 'nav-link' %>
-      </li>
-
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Spirits
@@ -83,6 +79,10 @@
           <%= link_to t(".category_absinthe_name"), category_path(Category.find_by(name: "Absinthe")), class: "dropdown-item" %>
           <%= link_to t(".category_minis_name"), category_path(Category.find_by(name: "Minis")), class: "dropdown-item" %>
         </div>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to t(".category_liquor_name"), category_path(Category.find_by(name: "Liquor")), class: 'nav-link' %>
       </li>
 
       <li class="nav-item">
