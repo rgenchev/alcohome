@@ -14,6 +14,7 @@ de:
       category_snacks_name: "Snacks"
       category_beer_name: "Bier"
       category_liquor_name: "Liquor"
+      category_tequila_name: "Tequila"
       category_absinthe_name: "Absinthe"
     show:
       category_champagne_name: "Champagner"
@@ -28,6 +29,7 @@ de:
       category_snacks_name: "Snacks"
       category_beer_name: "Bier"
       category_liquor_name: "Liquor"
+      category_tequila_name: "Tequila"
       category_absinthe_name: "Absinthe"
       category_additional_text: "Weitere Marken auf Anfrage"
       wine_category_first_paragraph: "“VINUM BONUM DEORUM DONUM”"
@@ -63,6 +65,7 @@ de:
       category_snacks_name: "Snacks"
       category_beer_name: "Bier"
       category_liquor_name: "Liquor"
+      category_tequila_name: "Tequila"
       category_absinthe_name: "Absinthe"
   static_pages:
     about_us:
@@ -90,7 +93,9 @@ de:
       category_snacks_name: "Snacks"
       category_beer_name: "Bier"
       category_liquor_name: "Liquor"
+      category_tequila_name: "Tequila"
       category_absinthe_name: "Absinthe"
+      category_tequila_name: "Tequila"
     contact:
       title: "Kontakt"
       address: "Adresse"
