@@ -13,6 +13,7 @@ de:
       category_soft_name: "AF"
       category_snacks_name: "Snacks"
       category_beer_name: "Bier"
+      category_tequila_name: "Tequila"
     show:
       category_champagne_name: "Champagner"
       category_wine_name: "Wein"
@@ -25,6 +26,7 @@ de:
       category_soft_name: "AF"
       category_snacks_name: "Snacks"
       category_beer_name: "Bier"
+      category_tequila_name: "Tequila"
       category_additional_text: "Weitere Marken auf Anfrage"
       wine_category_first_paragraph: "“VINUM BONUM DEORUM DONUM”"
       wine_category_second_paragraph: "“EIN GUTER WEIN IST EIN GESCHENK DER GÖTTER”"
@@ -58,6 +60,7 @@ de:
       category_soft_name: "AF"
       category_snacks_name: "Snacks"
       category_beer_name: "Bier"
+      category_tequila_name: "Tequila"
   static_pages:
     about_us:
       title: "Wer sind wir und was ist unsere Mission?"
@@ -83,6 +86,7 @@ de:
       category_soft_name: "AF"
       category_snacks_name: "Snacks"
       category_beer_name: "Bier"
+      category_tequila_name: "Tequila"
     contact:
       title: "Kontakt"
       address: "Adresse"
