@@ -2,36 +2,61 @@
   <%= image_tag('alcohome-logo.jpg', height: '100', width: '100', class: 'mx-auto') %>
 </div> -->
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
-  <%= link_to image_tag('alcohome_logo_transparent.png', height: '70', width: '70'), root_path, class: 'navbar-brand' %>
-  
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar fixed-top navbar-light bg-white justify-content-between">
+  <div class="col-md-4">
+      <%= link_to image_tag('alcohome_logo_transparent.png', height: '70', width: '70'), root_path, class: 'navbar-brand' %>
+  </div>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <% Category.all.each do |category| %>
-        <li class="nav-item">
-          <%= link_to "#{category.name}", category_path(category), class: 'nav-link' %>
-        </li>
-      <% end %>
+  <div class="col-md-4 text-center">
+      <div id="alcohome-heading">Alcohome</div>
+  </div>
 
-      <% if I18n.locale == I18n.default_locale %>
-        <li class="nav-item">
-          <%= link_to "Deutsch", { locale: :de }, class: 'nav-link font-weight-bold' %>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "English", { locale: :en }, class: 'nav-link font-weight-bold' %>
-        </li>
-      <% end %>
+  <div class="col-md-4 text-right">
+      <div class="contact-phone-number">
+        <a href="mailto:contact@alcohome.at?subject=Contact%20using%20web%20form&body=Please%20send%20me%20your%20catalog!"><i class="fa fa-envelope mr-1"></i> </a>
+        <p class="fa fa-phone mr-1"></p> +43 660 83 79 626
+          <% if current_user && current_user.admin? %>
+            <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: 'font-weight-bold' %>
+        <% end %>
+      </div>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+  </div>
+</nav>
 
-      <% if current_user && current_user.admin? %>
-        <li class="nav-item">
-          <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: 'nav-link font-weight-bold' %>
-        </li>
-      <% end %>
-    </ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+
+  <div class="col-md-1">
+  </div>
+
+  <div class="col-md-10">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <% Category.all.each do |category| %>
+          <li class="nav-item">
+            <%= link_to "#{category.name}", category_path(category), class: 'nav-link' %>
+          </li>
+        <% end %>
+
+        <% if I18n.locale == I18n.default_locale %>
+          <li class="nav-item">
+            <%= link_to "Deutsch", { locale: :de }, class: 'nav-link font-weight-bold' %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "English", { locale: :en }, class: 'nav-link font-weight-bold' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-md-1">
   </div>
 </nav>
