@@ -11,6 +11,8 @@
 
       <%= link_to t(".category_whiskey_name"), category_path(Category.find_by(name: "Whiskey")) %>
 
+      <%= link_to t(".category_cognac_name"), category_path(Category.find_by(name: "Cognac")) %>
+
       <%= link_to t(".category_wine_name"), category_path(Category.find_by(name: "Wine")) %>
 
       <%= link_to t(".category_champagne_name"), category_path(Category.find_by(name: "Champagne")) %>
@@ -51,6 +53,10 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <%= link_to t(".category_whiskey_name"), category_path(Category.find_by(name: "Whiskey")), class: 'nav-link' %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to t(".category_cognac_name"), category_path(Category.find_by(name: "Cognac")), class: 'nav-link' %>
       </li>
 
       <li class="nav-item">

@@ -16,6 +16,7 @@ de:
       category_liquor_name: "Liquor"
       category_tequila_name: "Tequila"
       category_absinthe_name: "Absinthe"
+      category_cognac_name: "Cognac"
     show:
       category_champagne_name: "Champagner"
       category_wine_name: "Wein"
@@ -31,6 +32,7 @@ de:
       category_liquor_name: "Liquor"
       category_tequila_name: "Tequila"
       category_absinthe_name: "Absinthe"
+      category_cognac_name: "Cognac"
       category_additional_text: "Weitere Marken und Größen auf Anfrage"
       wine_category_first_paragraph: "“VINUM BONUM DEORUM DONUM”"
       wine_category_second_paragraph: "“EIN GUTER WEIN IST EIN GESCHENK DER GÖTTER”"
@@ -67,6 +69,7 @@ de:
       category_liquor_name: "Liquor"
       category_tequila_name: "Tequila"
       category_absinthe_name: "Absinthe"
+      category_cognac_name: "Cognac"
   static_pages:
     about_us:
       title: "Wer sind wir und was ist unsere Mission?"
@@ -95,7 +98,7 @@ de:
       category_liquor_name: "Liquor"
       category_tequila_name: "Tequila"
       category_absinthe_name: "Absinthe"
-      category_tequila_name: "Tequila"
+      category_cognac_name: "Cognac"
     contact:
       title: "Kontakt"
       address: "Adresse"
