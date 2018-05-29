@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.where.not(name: ["Liquor", "Absinthe"])
+    @categories = Category.all
 
     authorize @categories
   end
