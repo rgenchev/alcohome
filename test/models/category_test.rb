@@ -22,8 +22,8 @@ class CategoryTest < ActiveSupport::TestCase
     category.image = fixture_file_upload 'images/test_category_image.jpg'
   end
 
-  test "only 9 categories (at least for now) should be limited" do
-    9.times do
+  test "categories (at least for now) should be limited" do
+    15.times do
       Category.create!(name: "#{rand(10000)}", image: fixture_file_upload('images/test_category_image.jpg'))
     end
 

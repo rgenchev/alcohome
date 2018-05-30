@@ -12,7 +12,8 @@
           <div class="hoverable-field-wrapper">
             <%= image_tag("#{category.name.downcase}.jpg", class: 'hoverable-image img-fluid rounded') %>
             <div class="hoverable-field-text-wrapper">
-              <strong></i> <h2><%= category.name %></h2></strong>
+
+              <h2 class="font-weight-bold"><%= t(".category_#{category.name.downcase}_name") %></h2>
             </div>
           </div>
         </a>

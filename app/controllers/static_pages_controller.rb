@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
 	def home
-    @arr = Category.all.to_a.sample 3
+    @categories = Category.where.not(name: ["Liquor", "Absinthe", "Minis"])
+    @arr = @categories.to_a.sample 3
 
     @category_random = @arr[0]
     @category_random2 = @arr[1]
@@ -9,9 +10,12 @@ class StaticPagesController < ApplicationController
     @on_sale_products = Product.order("RANDOM()").on_sale.limit(3)
 	end
 
-  def about
+  def about_us
   end
 
   def contact
+  end
+
+  def terms_of_service
   end
 end

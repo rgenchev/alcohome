@@ -2,6 +2,9 @@ require 'test_helper'
 
 class VendorsControllerTest < ActionDispatch::IntegrationTest
   setup do
+    create_categories
+
+    category = Category.first
     @vendor = Vendor.create!(name: "Coca-Cola")
   end
 

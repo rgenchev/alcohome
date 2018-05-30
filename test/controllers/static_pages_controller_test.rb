@@ -3,9 +3,7 @@ require 'test_helper'
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
 
   setup do
-    category_1 = Category.create!(name: "Vodka", image: fixture_file_upload('images/test_category_image.jpg'))
-    category_2 = Category.create!(name: "Gin", image: fixture_file_upload('images/test_category_image.jpg'))
-    category_3 = Category.create!(name: "Whiskey", image: fixture_file_upload('images/test_category_image.jpg'))
+    create_categories
   end
 
   test "should get home" do
@@ -13,8 +11,8 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get about" do
-    get about_url
+  test "should get about_us" do
+    get about_us_url
     assert_response :success
   end
 

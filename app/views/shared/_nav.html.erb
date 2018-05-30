@@ -2,27 +2,73 @@
   <%= image_tag('alcohome-logo.jpg', height: '100', width: '100', class: 'mx-auto') %>
 </div> -->
 
-<nav class="navbar fixed-top navbar-light bg-white justify-content-between">
-  <div class="col-md-4">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white justify-content-between">
+  <div class="col-4">
       <%= link_to image_tag('alcohome_logo_transparent.png', height: '70', width: '70'), root_path, class: 'navbar-brand' %>
   </div>
-
-  <div class="col-md-4 text-center">
+  <div class="col-4 text-center d-none d-md-block">
       <div id="alcohome-heading">Alcohome</div>
   </div>
 
-  <div class="col-md-4 text-right">
-      <div class="contact-phone-number">
-        <a href="mailto:contact@alcohome.at?subject=Contact%20using%20web%20form&body=Please%20send%20me%20your%20catalog!"><i class="fa fa-envelope mr-1"></i> </a>
-        <p class="fa fa-phone mr-1"></p> +43 660 83 79 626
-          <% if current_user && current_user.admin? %>
+      <div class="col-4 text-right d-none d-md-block">
+          <div class="d-none d-sm-block">
+              <a href="mailto:contact@alcohome.at?subject=Contact%20using%20web%20form&body=Please%20send%20me%20your%20catalog!"><i class="fa fa-envelope mr-1"></i> </a>
+              <p class="fa fa-phone mr-1"></p> +43 660 83 79 626
+                        <% if current_user && current_user.admin? %>
             <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: 'font-weight-bold' %>
         <% end %>
+                  <% if I18n.locale == I18n.default_locale %>
+            <%= link_to image_tag('de.png'), { locale: :de } %>
+          <% else %>
+            <%= link_to image_tag('en.png'), { locale: :en } %>
+          <% end %>
+           </div>
+
       </div>
       <p></p>
       <p></p>
       <p></p>
       <p></p>
+  </div>
+
+
+    <div class="col-4">
+      <button class="navbar-toggler">
+        <span class="navbar-toggler-icon" onclick="openNav()"></span>
+      </button>
+
+      <div id="mySidenav" class="sidenav" data-turbolinks="false">
+        <ul class="navbar-nav ml-auto">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+          <%= link_to t(".category_whiskey_name"), category_path(Category.find_by(name: "Whiskey")) %>
+
+         
+
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Spirits
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to t(".category_vodka_name"), category_path(Category.find_by(name: "Vodka")), class: "dropdown-item" %>
+             
+            </div>
+          </li>
+
+        <% if I18n.locale == I18n.default_locale %>
+          <li class="nav-item d-block d-sm-none">
+            <%= link_to image_tag('de.png'), { locale: :de }, class: 'nav-link' %>
+          </li>
+        <% else %>
+          <li class="nav-item d-block d-sm-none">
+            <%= link_to image_tag('en.png'), { locale: :en }, class: 'nav-link' %>
+          </li>
+        <% end %>
+          <% if current_user && current_user.admin? %>
+            <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: 'font-weight-bold' %>
+          <% end %>
+        </ul>
+      </div>
   </div>
 </nav>
 
@@ -32,27 +78,21 @@
   </div>
 
   <div class="col-md-10">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto">
-        <% Category.all.each do |category| %>
-          <li class="nav-item">
-            <%= link_to "#{category.name}", category_path(category), class: 'nav-link' %>
-          </li>
-        <% end %>
+        <li class="nav-item">
+          <%= link_to t(".category_whiskey_name"), category_path(Category.find_by(name: "Whiskey")), class: 'nav-link' %>
+        </li>
 
-        <% if I18n.locale == I18n.default_locale %>
-          <li class="nav-item">
-            <%= link_to "Deutsch", { locale: :de }, class: 'nav-link font-weight-bold' %>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "English", { locale: :en }, class: 'nav-link font-weight-bold' %>
-          </li>
-        <% end %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Spirits
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to t(".category_vodka_name"), category_path(Category.find_by(name: "Vodka")), class: "dropdown-item" %>
+          </div>
+        </li>
+      </div>
       </ul>
     </div>
   </div>
@@ -60,3 +100,15 @@
   <div class="col-md-1">
   </div>
 </nav>
+
+<script type="text/javascript">
+    /* Open the sidenav */
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+  }
+
+  /* Close/hide the sidenav */
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+</script>

@@ -13,12 +13,12 @@
         <i><%= link_to @product.vendor.name, vendor_path(@product.vendor) %></i> |
         <i><%= link_to @product.category.name, category_path(@product.category) %></i>
       </div>
-	    <% if @product.on_sale %>
+<!-- 	    <% if @product.on_sale %>
 	       <div class="price on-sale-price"><%= t('.now') %> &euro;<%= @product.on_sale_price %></div>
 	    <% end %>
 	    <div class="price <%= 'line-through' if @product.on_sale %>">
         &euro;<%= @product.price %>
-	    </div>
+	    </div> -->
 		</div>
 	</div>
 </div>
