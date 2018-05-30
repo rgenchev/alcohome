@@ -16,6 +16,7 @@ en:
       category_liquor_name: "Liquor"
       category_tequila_name: "Tequila"
       category_absinthe_name: "Absinthe"
+      category_cognac_name: "Cognac"
     show:
       category_champagne_name: "Champagne"
       category_wine_name: "Wine"
@@ -31,7 +32,8 @@ en:
       category_liquor_name: "Liquor"
       category_tequila_name: "Tequila"
       category_absinthe_name: "Absinthe"
-      category_additional_text: "Further brands on request"
+      category_cognac_name: "Cognac"
+      category_additional_text: "Further brands and sizes on request"
       wine_category_first_paragraph: "“VINUM BONUM DEORUM DONUM”"
       wine_category_second_paragraph: "“A GOOD WINE IS A GIFT OF THE GODS”"
       wine_category_third_paragraph: "Our broad assortment includes an exquisite selection of regional as well as international red and white wines, all of which we happily provide upon request."
@@ -67,6 +69,7 @@ en:
       category_liquor_name: "Liquor"
       category_tequila_name: "Tequila"
       category_absinthe_name: "Absinthe"
+      category_cognac_name: "Cognac"
   static_pages:
     about_us:
       title: "Who are we and what's our mission?"
@@ -95,6 +98,7 @@ en:
       category_liquor_name: "Liquor"
       category_tequila_name: "Tequila"
       category_absinthe_name: "Absinthe"
+      category_cognac_name: "Cognac"
     contact:
       title: "Contact"
       address: "Address"
