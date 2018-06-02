@@ -1,0 +1,80 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white justify-content-between">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-4">
+        <%= link_to image_tag('alcohome_logo_transparent.png', height: '70', width: '70'), root_path, class: 'navbar-brand' %>
+      </div>
+
+      <div class="col-md-4 text-center d-none d-md-block">
+          <div id="alcohome-heading">AlcoHome</div>
+      </div>
+
+      <div class="col-md-4 text-right d-none d-md-block">
+        <div class="d-none d-md-block lh">
+          <a href="mailto:contact@alcohome.at?subject=Contact%20using%20web%20form&body=Please%20send%20me%20your%20catalog!"><i class="fa fa-envelope mr-1"></i> </a>
+          <i class="fa fa-phone mr-1"></i> <small>+43 660 83 79 626</small>
+          
+          <% if I18n.locale == I18n.default_locale %>
+            <%= link_to image_tag('de.png', class: 'rounded', height: '15', width: '25'), { locale: :de } %>
+          <% else %>
+            <%= link_to image_tag('en.png', class: 'rounded', height: '15', width: '25'), { locale: :en } %>
+          <% end %>
+
+          <% if current_user && current_user.admin? %>
+            <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: 'font-weight-bold' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <%= link_to t(".category_whiskey_name"), category_path(Category.find_by(name: "Whiskey")), class: 'nav-link' %>
+            </li>
+
+            <li class="nav-item">
+              <%= link_to t(".category_cognac_name"), category_path(Category.find_by(name: "Cognac")), class: 'nav-link' %>
+            </li>
+
+            <li class="nav-item">
+              <%= link_to t(".category_wine_name"), category_path(Category.find_by(name: "Wine")), class: 'nav-link' %>
+            </li>
+
+            <li class="nav-item">
+              <%= link_to t(".category_champagne_name"), category_path(Category.find_by(name: "Champagne")), class: 'nav-link' %>
+            </li>
+
+            <li class="nav-item">
+              <%= link_to t(".category_beer_name"), category_path(Category.find_by(name: "Beer")), class: 'nav-link' %>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Spirits
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <%= link_to t(".category_vodka_name"), category_path(Category.find_by(name: "Vodka")), class: "dropdown-item" %>
+                <%= link_to t(".category_rum_name"), category_path(Category.find_by(name: "Rum")), class: "dropdown-item" %>
+                <%= link_to t(".category_gin_name"), category_path(Category.find_by(name: "Gin")), class: "dropdown-item" %>
+                <%= link_to t(".category_tequila_name"), category_path(Category.find_by(name: "Tequila")), class: "dropdown-item" %>
+                <%= link_to t(".category_absinthe_name"), category_path(Category.find_by(name: "Absinthe")), class: "dropdown-item" %>
+                <%= link_to t(".category_liquor_name"), category_path(Category.find_by(name: "Liquor")), class: "dropdown-item" %>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <%= link_to t(".category_soft_name"), category_path(Category.find_by(name: "Soft")), class: 'nav-link' %>
+            </li>
+
+            <li class="nav-item">
+              <%= link_to t(".category_snacks_name"), category_path(Category.find_by(name: "Snacks")), class: 'nav-link' %>
+            </li>
+          </ul>    
+        </div>
+      </div>
+    </div>
+  </div>  
+</nav>

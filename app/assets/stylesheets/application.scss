@@ -64,7 +64,7 @@ html,body {
 }
 
 body {
-	padding-top: 80px;
+	padding-top: 170px;
 	font-family: 'Raleway', sans-serif;
 	font-size: 1.3rem;
 }
@@ -157,7 +157,27 @@ a:active {
 	text-decoration: line-through;
 }
 
+.nav-mobile {
+  visibility: hidden;
+}
+
+.nav-desktop {
+  visibility: visible;
+}
+
+.lh {
+  line-height: 3.7;
+}
+
 @media (max-width: 768px) {
+  .nav-desktop {
+    visibility: hidden;
+  }
+
+  .nav-mobile {
+    visibility: visible;
+  }
+
 	#alcohome-heading {
 		font-size: 3.5rem;
 	}
@@ -171,9 +191,38 @@ a:active {
 	}
 
 	body {
+    padding-top: 100px;
 		overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
 	}
+}
+
+@media (max-width: 991px) {
+  .nav-desktop {
+    visibility: hidden;
+  }
+
+  .nav-mobile {
+    visibility: visible;
+  }
+
+  #alcohome-heading {
+    font-size: 3.5rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-email, .contact-phone-number, .contact-address {
+    font-size: 0.9rem;
+  }
+
+  body {
+    padding-top: 100px;
+    overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+  }
 }
 
 #parent {
