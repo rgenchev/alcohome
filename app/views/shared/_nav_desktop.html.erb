@@ -13,14 +13,14 @@
 
       <div class="col-md-4 text-right d-none d-md-block">
         <div class="d-none d-md-block lh">
-          <a href="mailto:contact@alcohome.at?subject=Contact%20using%20web%20form&body=Please%20send%20me%20your%20catalog!"><i class="fa fa-envelope mr-1"></i> </a>
-          <i class="fa fa-phone mr-1"></i> <small>+43 660 83 79 626</small>
-          
           <% if I18n.locale == I18n.default_locale %>
             <%= link_to image_tag('de.png', class: 'rounded', height: '15', width: '25'), { locale: :de } %>
           <% else %>
             <%= link_to image_tag('en.png', class: 'rounded', height: '15', width: '25'), { locale: :en } %>
           <% end %>
+
+          <a href="mailto:contact@alcohome.at?subject=Contact%20using%20web%20form&body=Please%20send%20me%20your%20catalog!"><i class="fa fa-envelope mr-1"></i> </a>
+          <i class="fa fa-phone mr-1"></i> <small>+43 660 83 79 626</small>
 
           <% if current_user && current_user.admin? %>
             <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: 'font-weight-bold' %>
