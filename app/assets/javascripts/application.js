@@ -17,3 +17,31 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+
+
+function getCookie(name) {
+	var value = "; " + document.cookie;
+	var parts = value.split("; " + name + "=");
+	if (parts.length == 2) return parts.pop().split(";").shift();
+}
+
+$(document).ready(function() {
+	var cookie = getCookie("isMyModalActive");
+
+	if (cookie == null) {
+		document.cookie = "isMyModalActive=true";
+	}
+
+	console.log(cookie);
+
+	if (cookie == 'true') {
+	    $('#myModal').modal({backdrop: 'static', keyboard: false, show: true});
+	}
+})
+
+
+function confirmAge() {
+	sessionStorage.setItem("age_check","true");
+	document.cookie = "isMyModalActive=false";
+};
