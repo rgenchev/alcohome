@@ -11,23 +11,26 @@
       <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
       <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
       <script>
-        window.addEventListener("load", function(){
-        window.cookieconsent.initialise({
-          "palette": {
-            "popup": {
-              "background": "#000"
-            },
-            "button": {
-              "background": "#f1d600"
-            }
+      window.addEventListener("load", function(){
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#000"
+          },
+          "button": {
+            "background": "#f1d600"
           }
-        })});
+        },
+        "content": {
+          "message": "Um unseren Kunden den besten Service bieten zu können und die Benutzung zu vereinfachen, verwenden wir auf unserer Homepage Cookies. Bitte bestätige, dass du damit einverstanden bist.",
+          "href": "https://www.alcohome.at/terms_of_service"
+        }
+      })});
       </script>
     </head>
 
     <body>
       <%= render 'shared/age_check' %>
-
       <%= render 'shared/nav' %>
       <%= render 'shared/flash_message' %>
       <%= yield %>
