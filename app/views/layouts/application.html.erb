@@ -26,9 +26,7 @@
     </head>
 
     <body>
-      <% if session[:age_check] != true %>
-        <%= render 'shared/age_check' %>
-      <% end %>
+      <%= render 'shared/age_check' %>
 
       <%= render 'shared/nav' %>
       <%= render 'shared/flash_message' %>
