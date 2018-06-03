@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   include Pundit
   protect_from_forgery with: :exception
 
-  before_action :set_locale
+  before_action :set_locale, :set_age_check
 
   def default_url_options
     { locale: I18n.locale }
@@ -14,5 +14,9 @@ class ApplicationController < ActionController::Base
   protected
     def set_locale
       I18n.locale = params[:locale] || I18n.default_locale
+    end
+
+    def set_age_check
+      session[:age_check] ||= false
     end
 end
