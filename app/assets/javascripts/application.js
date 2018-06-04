@@ -24,6 +24,10 @@ window.onload = function() {
 		sessionStorage.setItem("age_check","false");
 	}
 
+	if (history.length == 1) {
+		sessionStorage.setItem("age_check","true");
+	}
+
 	if (sessionStorage.getItem("age_check") == 'false') {
 	    $('#myModal').modal({backdrop: 'static', keyboard: false, show: true});
 	}
