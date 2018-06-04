@@ -3,11 +3,11 @@
 <div class="container-fluid">
 	<div class="row mt-5">
 
-		<div class="col-md-6 text-center mb-3">
+		<div class="col-md-6 text-center mt-5 mb-3">
 			<%= image_tag(@product.image.url, class: 'img-fluid rounded') %>
 		</div>
 
-		<div class="col-md-6 text-center mt-3 align-self-start">
+		<div class="col-md-6 text-center align-self-start mt-5 mb-3">
 			<h1 class="font-weight-bold"><%= @product.name %></h1>
       <div>
         <i><%= link_to @product.vendor.name, vendor_path(@product.vendor) %></i> |
